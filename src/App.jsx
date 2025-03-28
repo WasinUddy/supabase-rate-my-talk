@@ -110,7 +110,7 @@ function App() {
     const handleGoogleLogin = async () => {
         const { error } = await supabase.auth.signInWithOAuth({
             provider: 'google',
-            options: { redirectTo: window.location.origin }
+            options: { redirectTo: "https://wasinuddy.github.io/supabase-rate-my-talk/" }
         });
         if (error) console.error('Error logging in with Google:', error);
     };
