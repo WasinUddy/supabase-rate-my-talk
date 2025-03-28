@@ -7,13 +7,12 @@ const supabase = createClient(
     import.meta.env.VITE_SUPABASE_KEY
 );
 
-
 const ratingEmojis = {
-    1: '😢 Poor',
-    2: '🙁 Below Average',
-    3: '😐 Average',
+    5: '🎉 Excellent',
     4: '😊 Good',
-    5: '🎉 Excellent'
+    3: '😐 Average',
+    2: '🙁 Below Average',
+    1: '😢 Poor'
 };
 
 function App() {
@@ -221,7 +220,7 @@ function App() {
                                 className="w-full p-3 bg-gray-700 text-white border-2 border-gray-600 rounded-lg mb-4 text-center focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300"
                             >
                                 <option value="" className="bg-gray-800">Select your rating</option>
-                                {[1, 2, 3, 4, 5].map(num => (
+                                {[5, 4, 3, 2, 1].map(num => (
                                     <option key={num} value={num} className="bg-gray-800">
                                         {ratingEmojis[num]}
                                     </option>
